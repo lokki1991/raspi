@@ -32,7 +32,8 @@ Zeichen = UART.read()
         ID = ID.replace(Endflag, "" )
         # Calc checksum
         for I in range(0, 9, 2):
-            Checksumme = Checksumme ^ (((int(ID[I], 16)) << 4) + int(ID[I+1], 16$
+            Checksumme = Checksumme ^ (((int(ID[I], 16)) << 4) + int(ID[I+1], 16))
         Checksumme = hex(Checksumme)
         # Find tag
-        Tag = ((int(ID[1], 16)) << 8) + ((int(ID[2], 16)) << 4) + ((int(ID[3], 1$
+        Tag = ((int(ID[1], 16)) << 8) + ((int(ID[2], 16)) << 4) + ((int(ID[3], 16)) << 0)
+        Tag = hex(Tag)
