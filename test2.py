@@ -1,4 +1,5 @@
 import serial
+
 def read_rfid():
         ser = serial.Serial("/dev/ttyS0")
         ser.baudrate = 9600
